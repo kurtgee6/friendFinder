@@ -70,6 +70,14 @@ h1 {
     color: black;
 }
 
+input {
+    width: 60%;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+    padding: 2px;
+}
+
 .questions {
     color: black;
     border: 1px solid #184d64;
