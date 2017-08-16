@@ -11,14 +11,15 @@ var PORT = 8080;
 
 //parse application
 app.use(bodyParser.json());
-app.use(express.static('public'));
-app.use(express.static('data/friend.js'));
+app.use(express.static('app/public'));
+app.use(express.static('app/data'));
+
 
 //gets the API table stored in apiRoutes.js so users can see data
-require('./routing/apiRoutes.js')(app);
+require('./app/routing/apiRoutes.js')(app);
 
 //gets the HTML file stored in htmlRoute.js so users sees display
-require('./routing/htmlRoutes.js')(app);
+require('./app/routing/htmlRoutes.js')(app);
 
 //PORT listener
 app.listen(PORT, function () {
