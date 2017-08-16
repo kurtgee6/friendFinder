@@ -1,11 +1,12 @@
 $(document).ready(function () {
     //on click listener for when submit button is clicked
     $("#submitButton").click(function () {
+        //emptyUserArr
         var emptyUserArr = [];
         //user input name value
         var name = $('#name').val().trim();
         //user input image value
-        var image = $('#image').attr('src');
+        var image = $('#image').val().trim();
 
         //user input question values
         var valQues1 = $('#q1').val();
@@ -19,30 +20,32 @@ $(document).ready(function () {
         var valQues9 = $('#q9').val();
         var valQues10 = $('#q10').val();
 
-        //question values pushed into object
+        //values declared again inside questionObject
         var questionObject = {
-            question1: parseInt(valQues1),
-            question2: parseInt(valQues2),
-            question3: parseInt(valQues3),
-            question4: parseInt(valQues4),
-            question5: parseInt(valQues5),
-            question6: parseInt(valQues6),
-            question7: parseInt(valQues7),
-            question8: parseInt(valQues8),
-            question9: parseInt(valQues9),
-            question10: parseInt(valQues10)
+            name: name,
+            image: image,
+            scores: [parseInt(valQues1),
+            parseInt(valQues2),
+            parseInt(valQues3),
+            parseInt(valQues4),
+            parseInt(valQues5),
+            parseInt(valQues6),
+            parseInt(valQues7),
+            parseInt(valQues8),
+            parseInt(valQues9),
+            parseInt(valQues10)]
         }
 
-        emptyUserArr.push(name);
-        emptyUserArr.push(image);
+        //questionObject push into emptyUserArr array 
         emptyUserArr.push(questionObject);
 
-        //        //console log 
-        console.log(emptyUserArr); //        console.log("My name is: " + name);
-        //        console.log("My image is: " + image);
-        //        console.log(questionObject);
+        //check user information in console
+        console.log("NEW USER INFORMATION");
+        console.log(emptyUserArr);
     });
 });
 
 
-//push values into empty array
+//create a check function
+//if user is similar to the another user
+//modal pops up and user info is displayed.
