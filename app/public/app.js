@@ -43,14 +43,20 @@ $(document).ready(function () {
         console.log("\n");
 
         console.log("DATABASE INFORMATION");
-        runFriendsData();
+
 
         //post to the friends table "/api/friends"
         currentURL;
 
+        //posting to /api/friends 
         $.post(currentURL + "/api/friends", questionObject, function (data) {
-
+            runFriendsData();
+            return true;
         });
+
+        //displayed in the modal
+        $("#friendName").text(questionObject.name);
+        $("#friendImage").attr("src", questionObject.image);
 
     });
 
