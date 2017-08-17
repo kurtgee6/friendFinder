@@ -1,8 +1,8 @@
+var currentURL = window.location.origin;
+
 $(document).ready(function () {
     //on click listener for when submit button is clicked
     $("#submitButton").click(function () {
-        //emptyUserArr
-        var emptyUserArr = [];
         //user input name value
         var name = $('#name').val().trim();
         //user input image value
@@ -36,16 +36,41 @@ $(document).ready(function () {
             parseInt(valQues10)]
         }
 
-        //questionObject push into emptyUserArr array 
-        emptyUserArr.push(questionObject);
 
         //check user information in console
         console.log("NEW USER INFORMATION");
-        console.log(emptyUserArr);
+        console.log(questionObject);
+        console.log("\n");
+
+        console.log("DATABASE INFORMATION");
+        runFriendsData();
+
+        //post to the friends table "/api/friends"
+        currentURL;
+
+        $.post(currentURL + "/api/friends", questionObject, function (data) {
+
+        });
+
     });
+
+    //function that grabs friends data 
+    function runFriendsData() {
+        //current URL
+        currentURL;
+
+        //AJAX call to grab data
+        $.ajax({
+                url: currentURL + "/api/friends/",
+                method: "GET"
+            })
+            .done(function (friends) {
+                console.log("------------------------------------");
+                console.log("URL: " + currentURL + "/api/friends");
+                console.log("------------------------------------");
+                console.log(friends);
+                console.log("------------------------------------");
+            });
+    }
+
 });
-
-
-//create a check function
-//if user is similar to the another user
-//modal pops up and user info is displayed.
