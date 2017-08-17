@@ -1,7 +1,7 @@
 var friends = [
     {
-        "name": "Ahmed",
-        "photo": "https://avatars1.githubusercontent.com/u/643983?v=3&s=400",
+        "name": "Lebron James",
+        "image": "https://avatars1.githubusercontent.com/u/643983?v=3&s=400",
         "scores": [
         "5",
         "1",
@@ -16,8 +16,8 @@ var friends = [
         ]
     },
     {
-        "name": "Jacob Deming",
-        "photo": "https://avatars1.githubusercontent.com/u/643983?v=3&s=400",
+        "name": "Kobe Bryant",
+        "image": "https://avatars1.githubusercontent.com/u/643983?v=3&s=400",
         "scores": [
         "4",
         "2",
@@ -32,8 +32,8 @@ var friends = [
         ]
     },
     {
-        "name": "Jeremiah Scanlon",
-        "photo": "https://avatars1.githubusercontent.com/u/643983?v=3&s=400",
+        "name": "Michael Jordan",
+        "image": "https://avatars1.githubusercontent.com/u/643983?v=3&s=400",
         "scores": [
         "5",
         "2",
@@ -48,8 +48,8 @@ var friends = [
         ]
     },
     {
-        "name": "Louis T. Delia",
-        "photo": "https://avatars1.githubusercontent.com/u/643983?v=3&s=400",
+        "name": "Lonzo Ball",
+        "image": "https://avatars1.githubusercontent.com/u/643983?v=3&s=400",
         "scores": [
         "3",
         "3",
@@ -64,8 +64,8 @@ var friends = [
         ]
     },
     {
-        "name": "Lou Ritter",
-        "photo": "https://avatars1.githubusercontent.com/u/643983?v=3&s=400",
+        "name": "Stephen Curry",
+        "image": "https://avatars1.githubusercontent.com/u/643983?v=3&s=400",
         "scores": [
         "4",
         "3",
@@ -80,8 +80,8 @@ var friends = [
         ]
     },
     {
-        "name": "Jordan Biason",
-        "photo": "https://avatars1.githubusercontent.com/u/643983?v=3&s=400",
+        "name": "Kevin of Durant",
+        "image": "https://avatars1.githubusercontent.com/u/643983?v=3&s=400",
         "scores": [
         "4",
         "4",
