@@ -42,6 +42,14 @@ $(document).ready(function () {
         console.log(questionObject);
         console.log("\n");
 
+        //gets a total sum of the users input array
+        var sumUser = questionObject.scores;
+
+        console.log(sumUser.reduce(function (prev, cur) {
+            return prev + cur;
+        }));
+
+        console.log("\n");
         console.log("DATABASE INFORMATION");
 
 
@@ -55,8 +63,8 @@ $(document).ready(function () {
         });
 
         //displayed in the modal
-        $("#friendName").text(questionObject.name);
-        $("#friendImage").attr("src", questionObject.image);
+//        $("#friendName").text(questionObject.name);
+//        $("#friendImage").attr("src", questionObject.image);
 
     });
 
@@ -75,8 +83,33 @@ $(document).ready(function () {
                 console.log("URL: " + currentURL + "/api/friends");
                 console.log("------------------------------------");
                 console.log(friends);
+            
+                var emptyArr = [];
+            
+                 for (var i = 0; i < friends.length; i++) {
+                        
+                    emptyArr.push(friends[i]);
+
+                    };
+            
+                  var rand = emptyArr[Math.floor(Math.random() * emptyArr.length)];
+            
+            
+                    var oldUser = rand.name;
+                    var oldPhoto = rand.image;
+                     
+                    $("#friendName").text(oldUser);
+                    $("#friendImage").attr("src", oldPhoto);
+                        
+            
                 console.log("------------------------------------");
             });
-    }
+    };
 
 });
+
+
+
+//the final step I need to create is a comparison function
+//the function is supposed to compare users input from data stored in friend.js
+//end result of that function is to display the compatibility inside the modal

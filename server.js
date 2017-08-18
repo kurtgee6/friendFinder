@@ -10,13 +10,18 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 //parse application
+app.use(bodyParser.text());
 app.use(bodyParser.json());
-app.use(express.static('app/public'));
-app.use(express.static('app/data'));
 app.use(bodyParser.urlencoded({
-    extended: false
+    extended: true
+}));
+app.use(bodyParser.json({
+    type: "application/vnd.api+json"
 }));
 
+
+app.use(express.static('app/public'));
+app.use(express.static('app/data'));
 
 //gets the API table stored in apiRoutes.js so users can see data
 require('./app/routing/apiRoutes.js')(app);
