@@ -62,10 +62,6 @@ $(document).ready(function () {
             return true;
         });
 
-        //displayed in the modal
-//        $("#friendName").text(questionObject.name);
-//        $("#friendImage").attr("src", questionObject.image);
-
     });
 
     //function that grabs friends data 
@@ -83,27 +79,29 @@ $(document).ready(function () {
                 console.log("URL: " + currentURL + "/api/friends");
                 console.log("------------------------------------");
                 console.log(friends);
-            
+                
+                //empty Array
                 var emptyArr = [];
             
+                //for loop to loop through friends array
                  for (var i = 0; i < friends.length; i++) {
-                        
+                    //push into empty array
                     emptyArr.push(friends[i]);
 
                     };
             
-                  var rand = emptyArr[Math.floor(Math.random() * emptyArr.length)];
+                    //getting random person from data 
+                    var rand = emptyArr[Math.floor(Math.random() * emptyArr.length)];
             
-            
+                    //pulling data from rand and setting to new variables
                     var oldUser = rand.name;
                     var oldPhoto = rand.image;
-                     
+                    
+                    //displaying to modal once button is clicked
                     $("#friendName").text(oldUser);
                     $("#friendImage").attr("src", oldPhoto);
                         
-            
-                console.log("------------------------------------");
-            });
+        });
     };
 
 });
